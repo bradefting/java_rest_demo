@@ -24,8 +24,8 @@ public class Customer {
     @NotNull
     private String phone;
 
-
-//    private Address address;
+    @NotNull
+    private Address address;
 
     public Customer() { }
 
@@ -33,11 +33,11 @@ public class Customer {
         this.id = id;
     }
 
-    public Customer(String name, String email, String phone) {
+    public Customer(String name, String email, String phone, Address address) {
         this.name = name;
         this.email = email;
         this.phone = phone;
-//        this.address = address;
+        this.address = address;
     }
 
     public String getName() {
@@ -64,12 +64,8 @@ public class Customer {
         this.phone = phone;
     }
 
-//    public Address getAddress() {
-//        return address;
-//    }
-//
-//    public void setAddress(Address address) {
-//        this.address = address;
-//    }
+    public Address getAddress() { return address; }
+
+    public void setAddress(Address address) { this.address = address; }
 
 }
