@@ -1,0 +1,21 @@
+main {
+  box-sizing: border-box
+}
+
+#post_button {
+  margin-left: 10px;
+}
+
+.input-field {
+  width: 25rem;
+  margin-left: 10px;
+}
+
+.flex {
+  display: flex;
+  flex-direction: column;
+}
+
+.table_class {
+  margin: 10px;
+}

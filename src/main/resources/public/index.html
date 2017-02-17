@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Demo Java RESTful CRUD</title>
+  <!--Import Google Icon Font-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <!-- jQuery mobile -->
+  <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.5/jquery.mobile.min.css">
+
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
+
+  <link rel="stylesheet" href="./css/styles.css">
+
+</head>
+<body>
+  <main>
+    <table class="table_class">
+      <thead id="tableHead">
+        <tr>
+            <th data-field="id">Id</th>
+            <th data-field="name">Name</th>
+            <th data-field="email">Email</th>
+            <th data-field="phone">Phone</th>
+            <th data-field="street">Street</th>
+            <th data-field="city">City</th>
+            <th data-field="state">State</th>
+            <th data-field="zip">Zip</th>
+            <th data-field="edit">Edit</th>
+            <th data-field="delete">Delete</th>
+        </tr>
+      </thead>
+
+      <tbody id="table">
+
+      </tbody>
+    </table>
+   <br>
+   <div class="flex">
+
+       <p><b>Post New Customer</b></p>
+       <a id="post_button" class="btn-floating waves-effect waves-light red"><i class="material-icons">note_add</i></a>
+
+     <div class="input-field">
+        <input id="post_name" type="text" class="validate">
+        <label for="post_name">Name</label>
+      </div>
+      <div class="input-field">
+        <input id="post_email" type="text" class="validate">
+        <label for="post_email">Email</label>
+      </div>
+        <div class="input-field">
+           <input id="post_phone" type="text" class="validate">
+           <label for="post_phone">Phone</label>
+        </div>
+        <div class="input-field">
+           <input id="post_street" type="text" class="validate">
+           <label for="post_street">Street</label>
+        </div>
+        <div class="input-field">
+           <input id="post_city" type="text" class="validate">
+           <label for="post_city">City</label>
+        </div>
+        <div class="input-field">
+          <input id="post_state" type="text" class="validate">
+          <label for="post_state">State</label>
+        </div>
+        <div class="input-field">
+          <input id="post_zip" type="text" class="validate">
+          <label for="post_zip">Zip</label>
+        </div>
+   </div>
+  </main>
+
+  <!-- jQuery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+
+  <!-- Materialize JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
+
+  <!-- custom javascript -->
+  <script type="text/javascript" src="./js/index.js"></script>
+</body>
+</html>

@@ -37,12 +37,15 @@ public class CustomerController {
 
     @PostMapping("/customers")
     public ResponseEntity createCustomer(@RequestBody Customer customer) {
+        //post address to address route
+        //remove address from customer
+        //return id, add id to customer
         customerDao.save(customer);
 
         return new ResponseEntity(customer, HttpStatus.OK);
     }
 
-    @PutMapping("/customers/{id}")
+    @PatchMapping("/customers/{id}")
     public ResponseEntity updateCustomer(@PathVariable Long id, @RequestBody Customer customer) {
         if (!customerDao.exists(id)) {
             return new ResponseEntity("No Customer found for ID " + id, HttpStatus.NOT_FOUND);

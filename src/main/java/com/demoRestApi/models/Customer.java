@@ -9,23 +9,40 @@ import javax.validation.constraints.NotNull;
 
 @Entity
 @Table(name = "customers")
+@SecondaryTable(name = "addresses", pkJoinColumns = @PrimaryKeyJoinColumn(name = "cust_id"))
 public class Customer {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
 
+    @Column(name = "name", table = "customers")
     @NotNull
     private String name;
 
+    @Column(name = "email", table = "customers")
     @NotNull
     private String email;
 
+    @Column(name = "phone", table = "customers")
     @NotNull
     private String phone;
 
+    @Column(name = "street", table = "addresses")
     @NotNull
-    private Address address;
+    private String street;
+
+    @Column(name = "city", table = "addresses")
+    @NotNull
+    private String city;
+
+    @Column(name = "state", table = "addresses")
+    @NotNull
+    private String state;
+
+    @Column(name = "zip", table = "addresses")
+    @NotNull
+    private String zip;
 
     public Customer() { }
 
@@ -33,11 +50,20 @@ public class Customer {
         this.id = id;
     }
 
-    public Customer(String name, String email, String phone, Address address) {
+    public Customer(String name, String email, String phone, String street, String city, String state, String zip) {
         this.name = name;
         this.email = email;
         this.phone = phone;
-        this.address = address;
+        this.street = street;
+        this.city = city;
+        this.state = state;
+        this.zip = zip;
+    }
+
+    public long getId() { return id; }
+
+    public void setID(long id) {
+        this.id = id;
     }
 
     public String getName() {
@@ -64,8 +90,20 @@ public class Customer {
         this.phone = phone;
     }
 
-    public Address getAddress() { return address; }
+    public String getStreet() { return street; }
 
-    public void setAddress(Address address) { this.address = address; }
+    public void setStreet(String street) { this.street = street; }
+
+    public String getCity() { return city; }
+
+    public void setCity(String city) { this.city = city; }
+
+    public String getState() { return state; }
+
+    public void setState(String state) { this.state = state; }
+
+    public String getZip() { return zip; }
+
+    public void setZip(String zip) { this.zip = zip; }
 
 }
